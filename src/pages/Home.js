@@ -971,16 +971,16 @@ const Home = ({ user, onLogout }) => {
                {/* Project Report Card */}
                <div className="bg-white dark:bg-slate-800 p-8 rounded-2xl shadow-lg border border-slate-200 dark:border-slate-700 text-center hover:shadow-xl transition-shadow group cursor-pointer"
                     onClick={() => window.open('/path-to-your-report.pdf', '_blank')}>
-                 <div className="w-16 h-16 mx-auto bg-cyan-100 dark:bg-cyan-900/30 rounded-full flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
-                   <FileText className="w-8 h-8 text-cyan-600 dark:text-cyan-400"/>
+                 <div className="w-16 h-16 mx-auto bg-teal-100 dark:bg-teal-900/30 rounded-full flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+                   <FileText className="w-8 h-8 text-teal-600 dark:text-teal-400"/>
                  </div>
-                 <h3 className="text-2xl font-bold text-slate-900 dark:text-white mb-3 group-hover:text-cyan-600 dark:group-hover:text-cyan-400 transition-colors">
+                 <h3 className="text-2xl font-bold text-slate-900 dark:text-white mb-3 group-hover:text-teal-600 dark:group-hover:text-teal-400 transition-colors">
                    Project Report
                  </h3>
                  <p className="text-slate-600 dark:text-slate-400 mb-8 leading-relaxed">
                    Access the comprehensive project report detailing implementation, system design, and analysis.
                  </p>
-                 <button className="px-6 py-3 rounded-xl bg-cyan-50 text-cyan-700 dark:bg-cyan-900/20 dark:text-cyan-300 font-semibold group-hover:bg-cyan-600 group-hover:text-white transition-all duration-300 flex items-center justify-center gap-2 mx-auto">
+                 <button className="px-6 py-3 rounded-xl bg-teal-50 text-teal-700 dark:bg-teal-900/20 dark:text-teal-300 font-semibold group-hover:bg-teal-600 group-hover:text-white transition-all duration-300 flex items-center justify-center gap-2 mx-auto">
                    Open Document <ChevronRight className="w-4 h-4"/>
                  </button>
                </div>
@@ -998,10 +998,15 @@ const Home = ({ user, onLogout }) => {
           <div className="w-10 h-10 bg-gradient-to-br from-teal-600 to-cyan-600 rounded-lg flex items-center justify-center text-white font-bold text-lg shadow-sm">M</div>
           <span className="font-bold text-xl text-slate-900 dark:text-white">MED-Net</span>
         </div>
-        <div className="flex items-center gap-4">
-          {/* --- ADD THIS SECTION START --- */}
+
+          <div className="flex items-center gap-4">
+          
+          {/* 1. Theme Toggle comes first */}
+          <ThemeToggle/>
+
+          {/* 2. GitHub Link comes second */}
           <a
-            href="https://https://github.com/EhsaasN/MED-Net"
+            href="https://github.com/EhsaasN/MED-Net" 
             target="_blank"
             rel="noopener noreferrer"
             className="p-2 text-slate-500 hover:text-slate-700 dark:text-slate-400 dark:hover:text-slate-200 transition-colors rounded-full hover:bg-slate-100 dark:hover:bg-slate-800"
@@ -1009,14 +1014,13 @@ const Home = ({ user, onLogout }) => {
           >
             <Github className="w-5 h-5" />
           </a>
-          {/* --- ADD THIS SECTION END --- */}
-
-          <ThemeToggle/>
           
+          {/* 3. User Profile comes last (with the border-left separator) */}
           <div className="flex items-center gap-2 text-slate-700 dark:text-slate-300 border-l border-slate-200 dark:border-slate-700 pl-4">
             <User size={16}/>
             <span className="font-medium text-sm">{user?.name || 'User'}</span>
           </div>
+
         </div>
       </motion.nav>
 

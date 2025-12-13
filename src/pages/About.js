@@ -62,7 +62,7 @@ const AboutUs = () => {
     },
     {
       name: "Madhuri Vemparala",
-      branch: "CSE",
+      branch: "CS",
       github: "vmadx",
       githubUrl: "https://github.com/vmadx",
       linkedin: "madhurivemparala",
