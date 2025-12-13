@@ -29,7 +29,7 @@ const AboutUs = () => {
 
   const teamMembers = [
     {
-      name: "Ehsaas",
+      name: "Ehsaas Nahata",
       branch: "CSM",
       github: "EhsaasN",
       githubUrl: "https://github.com/EhsaasN",
@@ -37,12 +37,20 @@ const AboutUs = () => {
       linkedinUrl: "https://www.linkedin.com/in/ehsaas-nahata-836544347/"
     },
     {
-      name: "Honeysha M",
+      name: "Honeysha Magam",
       branch: "CSM",
       github: "Honeymagam",
       githubUrl: "https://github.com/Honeymagam",
       linkedin: "honeysha-magam",
       linkedinUrl: "https://www.linkedin.com/in/honeysha-magam-10b056372/"
+    },
+    {
+      name: "Kandibanda Sathwika",
+      branch: "CSE",
+      github: "sathwika-k",
+      githubUrl: "https://github.com/Sathwikaaaaa",
+      linkedin: "sathwika-kandibanda",
+      linkedinUrl: "https://www.linkedin.com/in/sathwika-kandibanda"
     },
     {
       name: "Kanishka Gupta",
@@ -53,7 +61,7 @@ const AboutUs = () => {
       linkedinUrl: "https://www.linkedin.com/in/kanishkagupta1409"
     },
     {
-      name: "Madhuri V",
+      name: "Madhuri Vemparala",
       branch: "CSE",
       github: "vmadx",
       githubUrl: "https://github.com/vmadx",
@@ -61,20 +69,12 @@ const AboutUs = () => {
       linkedinUrl: "https://www.linkedin.com/in/madhurivemparala/"
     },
     {
-      name: "Neha Thapasvi K",
+      name: "Neha Thapasvi Kodithala",
       branch: "CS",
       github: "nehaatapasvi",
       githubUrl: "https://github.com/nehaatapasvi",
       linkedin: "neha-thapasvi-k",
       linkedinUrl: "https://linkedin.com/in/neha-thapasvi-k"
-    },
-    {
-      name: "Sathwika K",
-      branch: "CSE",
-      github: "sathwika-k",
-      githubUrl: "https://github.com/Sathwikaaaaa",
-      linkedin: "sathwika-kandibanda",
-      linkedinUrl: "https://www.linkedin.com/in/sathwika-kandibanda"
     }
   ];
 
@@ -97,7 +97,7 @@ const AboutUs = () => {
             className="text-2xl text-slate-700 dark:text-slate-400 max-w-4xl mx-auto leading-relaxed"
             variants={itemVariants}
           >
-            Meet the Team Behind DTAAD
+            Meet the Team Behind MED-Net
           </motion.p>
         </motion.div>
 
@@ -111,7 +111,7 @@ const AboutUs = () => {
               <span>Development Team</span>
             </h2>
             <p className="text-lg text-slate-800 dark:text-slate-300 mb-8">
-              Meet the talented students behind DTAAD - each bringing unique skills and perspectives to create this innovative anomaly detection system.
+              MED-Net is the result of a student-led initiative focused on delivering professional-grade anomaly detection through collaborative innovation.
             </p>
 
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -182,7 +182,7 @@ const AboutUs = () => {
                 href="/login"
                 className="px-8 py-4 bg-gradient-to-r from-teal-600 to-cyan-600 hover:from-teal-700 hover:to-cyan-700 text-white rounded-xl font-semibold text-lg transition-all duration-300 shadow-lg hover:shadow-xl"
               >
-                Start Using DTAAD
+                Start Using MED-Net
               </motion.a>
               <motion.a
                 whileHover={{ scale: 1.05, y: -2 }}

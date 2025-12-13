@@ -1,7 +1,7 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
-  Home as HomeIcon, Upload, BarChart3, Bot, FileText, 
+  Home as HomeIcon, Upload, BarChart3, Bot, FileText, BookOpen,
   User, LogOut, ChevronDown, Activity, Database, Target, 
   TrendingUp, Send, Eye, Github, Upload as UploadIcon,
   ChevronRight, Zap, X, Plus
@@ -945,19 +945,44 @@ const Home = ({ user, onLogout }) => {
       case 'documentation':
         return (
           <motion.div variants={sectionVariants} initial="hidden" animate="visible" className="space-y-8">
-             <div className="text-center mb-8"><h2 className="text-3xl font-bold text-slate-900 dark:text-white">Documentation</h2></div>
-             <div className="grid md:grid-cols-2 gap-8">
-               <div className="bg-white dark:bg-slate-800 p-8 rounded-2xl shadow-lg border border-slate-200 dark:border-slate-700 text-center">
-                 <FileText className="w-12 h-12 mx-auto text-teal-600 mb-4"/>
-                 <h3 className="text-xl font-bold text-slate-900 dark:text-white mb-2">Full Guide</h3>
-                 <p className="text-slate-600 dark:text-slate-400 mb-6">Access the complete technical manual.</p>
-                 <button className="text-teal-600 font-semibold hover:underline">Open Documentation</button>
+             <div className="text-center mb-8">
+               <h2 className="text-3xl font-bold text-slate-900 dark:text-white">Technical Documentation</h2>
+               <p className="text-slate-600 dark:text-slate-400 mt-2">Access detailed reports on MED-Net architecture and performance</p>
+             </div>
+             
+             <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+               {/* Research Paper Card */}
+               <div className="bg-white dark:bg-slate-800 p-8 rounded-2xl shadow-lg border border-slate-200 dark:border-slate-700 text-center hover:shadow-xl transition-shadow group cursor-pointer"
+                    onClick={() => window.open('/path-to-your-paper.pdf', '_blank')}>
+                 <div className="w-16 h-16 mx-auto bg-teal-100 dark:bg-teal-900/30 rounded-full flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+                   <BookOpen className="w-8 h-8 text-teal-600 dark:text-teal-400"/>
+                 </div>
+                 <h3 className="text-2xl font-bold text-slate-900 dark:text-white mb-3 group-hover:text-teal-600 dark:group-hover:text-teal-400 transition-colors">
+                   Research Paper
+                 </h3>
+                 <p className="text-slate-600 dark:text-slate-400 mb-8 leading-relaxed">
+                   Read the full research paper on MED-Net architecture, methodology, and experimental results.
+                 </p>
+                 <button className="px-6 py-3 rounded-xl bg-teal-50 text-teal-700 dark:bg-teal-900/20 dark:text-teal-300 font-semibold group-hover:bg-teal-600 group-hover:text-white transition-all duration-300 flex items-center justify-center gap-2 mx-auto">
+                   Open Document <ChevronRight className="w-4 h-4"/>
+                 </button>
                </div>
-               <div className="bg-white dark:bg-slate-800 p-8 rounded-2xl shadow-lg border border-slate-200 dark:border-slate-700 text-center">
-                 <Github className="w-12 h-12 mx-auto text-slate-700 dark:text-slate-300 mb-4"/>
-                 <h3 className="text-xl font-bold text-slate-900 dark:text-white mb-2">Source Code</h3>
-                 <p className="text-slate-600 dark:text-slate-400 mb-6">Contribute to MED-Net on GitHub.</p>
-                 <a href="https://github.com/EhsaasN/DUAL_TCN_ATTN" target="_blank" rel="noreferrer" className="text-teal-600 font-semibold hover:underline">View Repository</a>
+
+               {/* Project Report Card */}
+               <div className="bg-white dark:bg-slate-800 p-8 rounded-2xl shadow-lg border border-slate-200 dark:border-slate-700 text-center hover:shadow-xl transition-shadow group cursor-pointer"
+                    onClick={() => window.open('/path-to-your-report.pdf', '_blank')}>
+                 <div className="w-16 h-16 mx-auto bg-cyan-100 dark:bg-cyan-900/30 rounded-full flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+                   <FileText className="w-8 h-8 text-cyan-600 dark:text-cyan-400"/>
+                 </div>
+                 <h3 className="text-2xl font-bold text-slate-900 dark:text-white mb-3 group-hover:text-cyan-600 dark:group-hover:text-cyan-400 transition-colors">
+                   Project Report
+                 </h3>
+                 <p className="text-slate-600 dark:text-slate-400 mb-8 leading-relaxed">
+                   Access the comprehensive project report detailing implementation, system design, and analysis.
+                 </p>
+                 <button className="px-6 py-3 rounded-xl bg-cyan-50 text-cyan-700 dark:bg-cyan-900/20 dark:text-cyan-300 font-semibold group-hover:bg-cyan-600 group-hover:text-white transition-all duration-300 flex items-center justify-center gap-2 mx-auto">
+                   Open Document <ChevronRight className="w-4 h-4"/>
+                 </button>
                </div>
              </div>
           </motion.div>
@@ -974,7 +999,20 @@ const Home = ({ user, onLogout }) => {
           <span className="font-bold text-xl text-slate-900 dark:text-white">MED-Net</span>
         </div>
         <div className="flex items-center gap-4">
+          {/* --- ADD THIS SECTION START --- */}
+          <a
+            href="https://https://github.com/EhsaasN/MED-Net"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="p-2 text-slate-500 hover:text-slate-700 dark:text-slate-400 dark:hover:text-slate-200 transition-colors rounded-full hover:bg-slate-100 dark:hover:bg-slate-800"
+            title="View GitHub Repo"
+          >
+            <Github className="w-5 h-5" />
+          </a>
+          {/* --- ADD THIS SECTION END --- */}
+
           <ThemeToggle/>
+          
           <div className="flex items-center gap-2 text-slate-700 dark:text-slate-300 border-l border-slate-200 dark:border-slate-700 pl-4">
             <User size={16}/>
             <span className="font-medium text-sm">{user?.name || 'User'}</span>

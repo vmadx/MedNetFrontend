@@ -17,7 +17,7 @@ const Footer = () => {
             {/* Logo and Project Name */}
             <div className="flex justify-center">
               <div className="w-12 h-12 bg-gradient-to-br from-teal-600 to-cyan-600 rounded-lg flex items-center justify-center">
-                <span className="text-white font-bold text-xl">D</span>
+                <span className="text-white font-bold text-xl">M</span>
               </div>
             </div>
 
@@ -46,7 +46,7 @@ const Footer = () => {
             {/* Project Description */}
             <div className="space-y-2 max-w-2xl mx-auto">
               <p className="text-slate-800 dark:text-slate-200 text-sm leading-relaxed">
-                Dual TCN-Attention Networks for Anomaly Detection in Multivariate Time Series Data
+                Multi-Scale Enhanced Dual Temporal Convolution Attention Network for Anomaly Detection in Multivariate Time Series Data
               </p>
               <p className="text-slate-600 dark:text-slate-400 text-sm font-medium">
                 Advanced Research Project
